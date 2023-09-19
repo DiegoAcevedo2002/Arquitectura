@@ -7,24 +7,24 @@ import {
 export const featuresData = [
   {
     color: "blue",
-    title: "Awarded Agency",
+    title: "Actas Cientificas",
     icon: StarIcon,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      " Estos documentos contienen resúmenes, artículos o comunicaciones científicas que abordan investigaciones, hallazgos, metodologías y análisis en un área específica del conocimiento. ",
   },
   {
     color: "red",
-    title: "Free Revisions",
+    title: "Revistas cientificas",
     icon: ArrowPathIcon,
     description:
-      "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.",
+      "Estos artículos son revisados por expertos en el campo, a través de un proceso de revisión por pares, para garantizar su calidad, rigor metodológico y contribución significativa al conocimiento existente.",
   },
   {
     color: "teal",
-    title: "Verified Company",
+    title: "Informe Tecnico",
     icon: FingerPrintIcon,
     description:
-      "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!",
+      "Este tipo de informe se utiliza para comunicar datos, análisis, resultados de experimentos, investigaciones o proyectos a un público técnico o especializado.",
   },
 ];
 

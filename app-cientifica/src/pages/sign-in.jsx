@@ -15,7 +15,7 @@ export function SignIn() {
   return (
     <>
       <img
-        src="/img/background-2.jpg"
+        src="/img/image_logo.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
@@ -27,27 +27,27 @@ export function SignIn() {
             className="mb-4 grid h-28 place-items-center"
           >
             <Typography variant="h3" color="white">
-              Sign In
+             Iniciar sesión
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input variant="standard" type="email" label="Email" size="lg" />
+            <Input variant="standard" type="email" label="Correo" size="lg" />
             <Input
               variant="standard"
               type="password"
-              label="Password"
+              label="Contraseña"
               size="lg"
             />
             <div className="-ml-2.5">
-              <Checkbox label="Remember Me" />
+              <Checkbox label="Recuerdame" />
             </div>
           </CardBody>
           <CardFooter className="pt-0">
             <Button variant="gradient" fullWidth>
-              Sign In
+             Iniciar sesión
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
-              Don't have an account?
+              ¿No tienes cuenta?
               <Link to="/sign-up">
                 <Typography
                   as="span"
@@ -55,7 +55,7 @@ export function SignIn() {
                   color="blue"
                   className="ml-1 font-bold"
                 >
-                  Sign up
+                  Registrate
                 </Typography>
               </Link>
             </Typography>
