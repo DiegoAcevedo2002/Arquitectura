@@ -27,7 +27,7 @@ export function SignUp() {
             className="mb-4 grid h-28 place-items-center"
           >
             <Typography variant="h3" color="white">
-            Registrarse
+            Crear usuario
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
@@ -45,7 +45,7 @@ export function SignUp() {
           </CardBody>
           <CardFooter className="pt-0">
             <Button variant="gradient" fullWidth>
-            Registrarse
+            Crear usuario
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
               ¿Aun no tienes cuenta?

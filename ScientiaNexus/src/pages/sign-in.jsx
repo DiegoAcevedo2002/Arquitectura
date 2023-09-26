@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -10,8 +10,25 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
+import { useState } from "react";
+import { login } from "@/api/users/users";
 
-export function SignIn() {
+export function SignIn({ auth, setAuth }) {
+  const navigate = useNavigate();
+
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  })
+
+  const handleSubmit = () => {
+    login(data.email, data.password).then((result) => {
+      setAuth(result)
+      navigate('/home');
+    }).catch((err) => {
+      alert(err)
+    });
+  }
   return (
     <>
       <img
@@ -31,19 +48,17 @@ export function SignIn() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input variant="standard" type="email" label="Correo" size="lg" />
+            <Input onChange={(e) => setData({ ...data, email: e.target.value })} variant="standard" type="email" label="Correo" size="lg" />
             <Input
+              onChange={(e) => setData({ ...data, password: e.target.value })}
               variant="standard"
               type="password"
               label="Contraseña"
               size="lg"
             />
-            <div className="-ml-2.5">
-              <Checkbox label="Recuerdame" />
-            </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth>
+            <Button onClick={() => handleSubmit()} variant="gradient" fullWidth>
              Iniciar sesión
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">

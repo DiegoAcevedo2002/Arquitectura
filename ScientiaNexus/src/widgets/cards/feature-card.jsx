@@ -5,9 +5,14 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
-export function FeatureCard({ color, icon, title, description }) {
+export function FeatureCard({ color, icon, title, description, path }) {
   return (
+            <Link
+              to={path}
+              className=""
+            >
     <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
       <CardBody className="px-8 text-center">
         <IconButton
@@ -25,7 +30,7 @@ export function FeatureCard({ color, icon, title, description }) {
           {description}
         </Typography>
       </CardBody>
-    </Card>
+    </Card> </Link>
   );
 }
 

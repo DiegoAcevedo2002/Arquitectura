@@ -112,7 +112,7 @@ export function Profile() {
                   <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
                     <Typography className="mb-8 font-normal text-blue-gray-500">
                       Este es un texto de prueba el cual va a fuincionar 
-                      principalmente para la ayuda de que tam bien se ve el txto que se tiene en la pantalla
+                      principalmente para la ayuda de que tam bien se ve el texto que se tiene en la pantalla
                     </Typography>
                     <Button variant="text">Show more</Button>
                   </div>

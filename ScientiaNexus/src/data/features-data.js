@@ -7,10 +7,12 @@ import {
 export const featuresData = [
   {
     color: "blue",
-    title: "Actas Cientificas",
+    title: "Autores",
     icon: StarIcon,
     description:
       " Estos documentos contienen resúmenes, artículos o comunicaciones científicas que abordan investigaciones, hallazgos, metodologías y análisis en un área específica del conocimiento. ",
+    path:"/autores"
+
   },
   {
     color: "red",
@@ -18,13 +20,7 @@ export const featuresData = [
     icon: ArrowPathIcon,
     description:
       "Estos artículos son revisados por expertos en el campo, a través de un proceso de revisión por pares, para garantizar su calidad, rigor metodológico y contribución significativa al conocimiento existente.",
-  },
-  {
-    color: "teal",
-    title: "Informe Tecnico",
-    icon: FingerPrintIcon,
-    description:
-      "Este tipo de informe se utiliza para comunicar datos, análisis, resultados de experimentos, investigaciones o proyectos a un público técnico o especializado.",
+      path:"/revista-cientifica"
   },
 ];
 
