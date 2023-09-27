@@ -13,4 +13,18 @@ const login = async (email, password) => {
   return await response;
 };
 
-export { login };
+
+const createUser = async (user) => {
+  const config = {
+    headers: {
+      accept: '*/*',
+      'Content-Type': 'application/json',
+    },
+  };
+  const response = await axios.post(endPoints.users.createUser, user, config);
+  return response.data;
+};
+
+
+export { createUser, login };
+

@@ -28,7 +28,7 @@ export const routes = (auth, setAuth) => {
     icon: UserCircleIcon,
     name: "Perfil",
     path: "/profile",
-    element: <Profile />,
+    element: <Profile auth={auth} setAuth={setAuth} />,
     view: auth,
   },
   {
@@ -47,7 +47,7 @@ export const routes = (auth, setAuth) => {
   },
   {
     icon: BookOpenIcon,
-    name: "Actas Cientificas",
+    name: "Autores",
     path: "/autores",
     element: <Autores />,
     view: true,

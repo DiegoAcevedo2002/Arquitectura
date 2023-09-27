@@ -23,7 +23,7 @@ export function SignIn({ auth, setAuth }) {
 
   const handleSubmit = () => {
     login(data.email, data.password).then((result) => {
-      setAuth(result)
+      setAuth(result.data)
       navigate('/home');
     }).catch((err) => {
       alert(err)

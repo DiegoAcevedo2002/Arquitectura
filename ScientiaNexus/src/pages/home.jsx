@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardBody,
@@ -14,8 +14,14 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import RevistaPost from "@/widgets/Resvista/ResvistaPost";
+import { getArticles } from "@/api/Article/article";
 
 export function Home() {
+  const [articles, serArticles] = useState([]);
+
+  useEffect(() => {
+    getArticles().then((res) => {serArticles(res)}).catch((err) => alert(err));
+  }, [])
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
@@ -40,7 +46,7 @@ export function Home() {
       </div>
       <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {featuresData.map(({ color, title, icon, description, path }) => (
               <FeatureCard
                 key={title}
@@ -55,7 +61,8 @@ export function Home() {
             ))}
           </div>
           <div className="mt-32 flex flex-wrap items-center">
-            <RevistaPost />
+          {articles.map((revista) => 
+            <RevistaPost revista={revista} />)}
           </div>
         </div>
       </section>
